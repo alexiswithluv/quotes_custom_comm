@@ -63,22 +63,21 @@ quotes=[
 
 const INTERVAL = 60000;
 
-function dispalyQuote(){
+function getRandomQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[randomIndex];
+}
 
-    document.getElementById('widget').innerHTML =quotes[0];
-    quotes.forEach((quote, i) => {
-        setTimeout(() => {
-            document.getElementById('widget').innerHTML =quote;
-        }, i * INTERVAL);  
-    });
-    }
+function displayQuote() {
+    document.getElementById('widget').innerHTML = getRandomQuote();
+}
 
-    function dispalyWidget() {
-        dispalyQuote();
-        setTimeout(dispalyWidget, quotes.length*INTERVAL);
-    }
-    dispalyWidget()
+function displayWidget() {
+    displayQuote();
+    setTimeout(displayWidget, INTERVAL);
+}
 
+displayWidget();
 </script>
 
 </body>
