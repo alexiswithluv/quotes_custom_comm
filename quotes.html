@@ -6,28 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote</title>
 
-    <style>
+<style>
+    .widget {
+        padding: 5px;
+        color: #379ad3;
+        text-align: start;
+        max-width: 95%;
+        margin: auto;
+        font-variant: normal;
+        font-size: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
 
-        .widget {
-            padding: 5px 5px ;
-            color: #379ad3;
-            text-align: start;
-                max-width: 95%;
-            margin: auto;
-            font-variant: normal;
-            font-size: 20px;
+    .widget::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 3px; /* Thickness of the vertical line */
+        height: 100%; /* Adjusts based on text height */
+        background-color: white;
+    }
 
-        }
+    div {
+        width: 95%;
+        min-height: 100px;
+    }
+</style>
 
-        div {
-             width: 95%;
-             min-height: 100px;
-
-            
-}
-
-     
-    </style>
 </head>
 <body>
 
